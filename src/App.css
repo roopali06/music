@@ -1,38 +1,4321 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container1{
+  position: fixed;
+  top:0;
+  bottom: 100px;
+  background-color: #000;
+  height: 100px;
+  width: 100%;
+}
+
+.container1 .wrapper{
+  padding: 25px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wrapper .logo i{
+  color: #fff;
+  font-size: 21px;
+}
+
+.wrapper .logo span{
+  color:aqua;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 6px 8px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.wrapper .searchbar input{
+  width: 360px;
+  height:32px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  outline: none;
+  padding-left: 10px;
+}
+
+.wrapper .searchbar input::placeholder{
+    color: #909090;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.searchbar i{
+  color:coral;
+  position: relative;
+  left: -28px;
+  top: 2px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.wrapper .account{
+ position: relative;
+}
+
+.wrapper .account .user{
+   font-size:16px;
+   color:#fff;
+   border-radius:50%;
+   position: absolute;
+   top:-4px;
+   left:-4.5px;
+   padding:4.5px 5px;
+   width:38px;
+   height:38px;
+}
+
+.wrapper .account .down{
+  position: absolute;
+  right:8px;
+  top:10px;
+  width:12px;
+  height:12px;
+}
+
+.account a{
+  text-decoration: none;
+}
+
+.wrapper .account .out{
+  color:#000;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding:6px 30px 6px 40px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient( 89.9deg,  rgba(178,253,238,0.96) -8.1%, rgba(207,244,254,1) 26.3%, rgba(207,244,254,0.48) 47.5%, rgba(254,219,243,0.63) 61.5%, rgba(254,219,243,1) 78.7%, rgba(254,207,210,1) 109.2% );
+}
+
+
+/*------------------------Section2 starts-----------------------*/
+
+.container2{
+ position: absolute;
+ top: 100px;
+}
+
+.container2 .options{
+  position:fixed;
+  right:-170px;
+  top:80px;
+  width:150px;
+  height:150px;
+  background:linear-gradient(147deg,#484848,#303030);
+  z-index: 999999;
+  padding:5px 8px;
+  border-radius:5px;
+  transition:0.5s all;
+}
+
+.options a{
+   text-decoration:none;
+}
+
+.container2 .options .closeit{
+  position:absolute;
+  right:0px;
+}
+
+.container2 .options .closeit i.fa-solid.fa-circle-xmark{
+      width:25px;
+      height:25px;
+      color:#fff;
+      cursor:pointer;
+}
+
+.options p{
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 15px;
+   font-weight:600;
+   color: #fff;
+   margin:10px 0px;
+   cursor: pointer;
+}
+
+.options .set{
+   display:none;
+}
+
+.container2 .contain2{
+  display: flex;
+  position: fixed;
+  top: 100px;
+  bottom: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.contain2 .col1{
+   flex-basis: 17%;
+   background: linear-gradient(to right, #2c3e50, #4ca1af);
+   color: #fff;
+   padding-left: 5px;
+   padding-bottom: 55px;
+   position: sticky;
+   position: -webkit-sticky;
+   top: 0px;
+}
+
+.col1 .head{
+   margin: 10px 0px 20px 0px;
+}
+
+.head i.fi-rr-list{
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.head i.fa-solid.fa-circle-xmark{
+  display: none;
+}
+
+.head i.fi-rr-headset{
+  font-size: 20px;
+  padding-left: 25px;
+}
+
+.head span{
+  font-size: 20px;
+  padding-left: 5px;
+  color:aqua;
+}
+
+.col1 .menus{
+  margin: 20px 0px 20px 0px;
+}
+
+.col1 .menus a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.menus div{
+  margin:15px 0px;
+}
+
+.menus i{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menus span{
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 15px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: relative;
+  top: -5px;
+  cursor: pointer;
+}
+
+.contain2 .col2{
+  flex-basis: 83%;
+  color: #000;
+  background:linear-gradient(147deg,rgba(159,188,198,1),rgba(159,188,198,1));
+}
+
+.container92{
+  margin:10px 10px 10px 10px;
+}
+
+.col2 .container92 .carousel1{
+  overflow:hidden;
+}
+
+.col2 p{
+  color:#fff;
+  font-size: 27px;
+  font-weight: 700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 16px 0px 10px 25px;
+  text-shadow: 2px 4px 2px #636FA4;
+}
+
+.col2 .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0px 50px 20px;
+  width:100%;
+}
+
+.boxes .box1{
+  width:310px;
+  height:90px;
+  background:linear-gradient(95.2deg,#c4e0e5,#ffffff);
+  margin:0px 10px 20px 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.boxes img{
+  width:90px;
+  height:90px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.boxes span{
+  position: relative;
+  top:-40px;
+  left: 20px;
+  font-size: 16px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color:#2F4F4F;
+}
+
+.boxes .playbtn{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right:25px;
+  top: 25px;
+  visibility: hidden;
+  opacity:0;
+}
+
+.boxes div:hover .playbtn{
+  visibility: visible;
+  opacity:1;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+
+/*------------------------Section2 ends-----------------------*/
+
+/*------------------------Section3 starts-----------------------*/
+
+.container3{
+    position: relative;
+    background:linear-gradient(147deg,rgba(159,188,198,1),rgba(159,188,198,1));
+}
+
+.container3 .contain3{
+  margin: 10px 0px 10px 10px;
+  position: relative;
+}
+
+.container3 .contain3 .carousel{
+  overflow: hidden;
+}
+
+.contain3 .head1{
+  font-size: 27px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  margin: 0px 0px 30px 18px;
+  color:#fff;
+  text-shadow: 2px 4px 2px #636FA4;
+}
+
+.contain3 a{
+  text-decoration: none;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  color:#E0FFFF;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.contain3 a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.container3 .contain3 .boxcontainer{
+  display: flex;
+  margin: 8px 8px 50px 0px;
+}
+
+.contain3 .boxcontainer .box11{
+  background: linear-gradient(to right,#CC95C0,#DBD4B4,#7AA1D2);
+  margin: 0px 15px 10px 20px;
+  width: 210px;
+  height: 310px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 4px 0px rgba(0,0,0,0.2);
+}
+
+.contain3 .boxcontainer .box11 .btn{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right:10px;
+  top: 120px;
+  visibility: hidden;
+  opacity: 0;
+ }
+
+.contain3 .boxcontainer .box11:hover .btn{
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+.contain3 .boxcontainer .box11 .half{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 10px 10px 10px 10px;
+  color:#383838;
+  position: relative;
+  top: -32px;
+ }
+
+ .contain3 .boxcontainer .box11 .singers{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 10px 10px 10px;
+  color:#F0FFFF;
+  position: relative;
+  top: -32px;
+  
+ }
+
+.contain3 .boxcontainer .box11 i{
+ position: relative;
+ top: 20px;
+ left: 20px;
+ z-index: 999;
+}
+
+.boxcontainer .box11 .mainpic{
+  width: 190px;
+  height: 190px; 
+  margin: 12px 10px 10px 10px;
+  position: relative;
+  top: -20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px rgba(0,0,0,0.2);
+}
+
+
+/*------------------------Section3 Ends-----------------------*/
+
+/*------------------------Section4 Starts-----------------------*/
+
+.container4{
+  position: relative;
+  background:linear-gradient(147deg,rgba(159,188,198,1),rgba(159,188,198,1));
+  margin: 10px 0px 10px 10px;
+}
+
+.container4 .head2{
+  font-size: 28px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  margin: 0px 0px 20px 30px;
+  color:#fff;
+  text-shadow: 2px 4px 2px #4ca2cd;
+}
+
+.container4 a{
+  text-decoration: none;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  color:#E0FFFF;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.container4 a:hover{
+   color: #fff;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.container4 .contain4{
+  display: flex;
+  margin:10px 10px 30px 10px;
+}
+
+.container4 .carousel{
+overflow: hidden;
+
+}
+
+.contain4 .circles{
+    margin: 0px 18px;
+    position: relative;
+}
+
+.contain4 .circles img{
+  width: 205px;
+  height: 205px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px 0px rgba(0,0,0,0.2);
+  border: 1px solid #fff;
+}
+
+.contain4 .circles .play6{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 160px;
+  right: 15px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.contain4 .circles:hover .play6{
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s all ease-in-out;
+}
+
+.contain4 .circles .artist{
+ font-size: 21px;
+ font-family:cursive;
+ font-weight: 600;
+ color:#F5F5DC;
+ margin: 8px 0px;
+}
+
+/*------------------------Section4 Ends-----------------------*/
+
+/*------------------------Section5(Electronic Zone) Starts-----------------------*/
+
+.container5{
+  position: relative;
+  background:linear-gradient(147deg,rgba(159,188,198,1),rgba(159,188,198,1));
+}
+
+.container5 .contain5{
+margin: 35px 20px 15px 10px;
+position: relative;
+}
+
+.contain5 .carousel{
+  overflow: hidden;
+}
+
+.contain5 .head3{
+font-size: 32px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-weight: 700;
+margin: 0px 0px 30px 25px;
+color:#fff;
+text-shadow: 2px 4px 2px #86a8e7;
+}
+
+.contain5 a{
+  text-decoration: none;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  color:#E0FFFF;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.contain5 a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.container5 .contain5 .boxcontainer{
+  display: flex;
+  margin: 8px 8px 50px 0px;
+  
+}
+
+.contain5 .boxcontainer .box12{
+  background: linear-gradient(to right, #DECBA4, #3E5151);
+  margin: 0px 15px 10px 20px;
+  width: 210px;
+  height: 325px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 0 4px 0px rgba(0,0,0,0.2);
+}
+
+.contain5 .boxcontainer .box12 .btn{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right:10px;
+  top: 120px;
+  visibility: hidden;
+  opacity: 0;
+ }
+
+.contain5 .boxcontainer .box12:hover .btn{
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+.contain5 .boxcontainer .box12 .half{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 10px 10px 10px 10px;
+  color:#383838;
+  position: relative;
+  top: -32px;
+ }
+
+ .contain5 .boxcontainer .box12 .singers{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 10px 10px 10px;
+  color:#F0FFFF;
+  position: relative;
+  top: -32px;
+  
+ }
+
+.contain5 .boxcontainer .box12 i{
+ position: relative;
+ top: 20px;
+ left: 20px;
+ z-index: 999;
+ color: #fff;
+}
+
+.boxcontainer .box12 img{
+  width: 190px;
+  height: 190px; 
+  margin: 12px 10px 10px 10px;
+  position: relative;
+  top: -20px;
+  box-shadow: 0 0 5px 0px rgba(0,0,0,0.2);
+}
+
+/*------------------------Section5(Electronic Zone) Ends-----------------------*/
+
+/*------------------------Section6(Most Streamed Albums) Starts-----------------------*/
+
+.container6{
+  position: relative;
+  margin:10px 0px 30px 10px;
+  width:100%;
+}
+
+.container6 .carousel1{
+  overflow: hidden;
+}
+
+.container6 .head4{
+  margin: 10px 0px 20px 30px;
+  font-size: 32px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 3px 2px #87CEEB;
+}
+
+.container6 .contain6{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 10px 10px 10px;
+}
+
+.container6 .contain6 .box13{
+  margin: 8px 15px;
+  position: relative;
+}
+
+.container6 .contain6 .box13 i{
+  position: absolute;
+  left:0;
+  color: #fff;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background: #e29587;
+  padding: 2px 6px;
+  opacity: 0.9;
+  border-bottom-right-radius: 5px;
+  
+}
+
+.contain6 .box13 .btn{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top:125px;
+  right: 125px;
+  cursor: pointer;
+  opacity:0;
+ }
+
+ .contain6 .box13:hover .btn{
+  opacity:1;
+  transition:0.5s all ease-in-out;
+ }
+
+ .container6 .contain6 .box13 .contain{
+   margin: 0px 0px 5px 0px;
+   padding: 5px 5px;
+   box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+   background-image: linear-gradient(92.7deg,#f2fcfe,#A7BFE8);
+}
+
+.container6 .contain6 .box13 .main{
+  font-size: 16px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+  margin: 5px 0px;
+  color:#000;
+}
+
+.container6 .contain6 .box13 .sub{
+  font-size: 16px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:600;
+  margin: 0px 0px 20px 0px;
+  color:#136a8a;
+}
+
+.contain6 .mainpict{
+  width:170px;
+  height:170px;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: -4px;
+}
+
+/*------------------------Section6(Most Streamed Albums) Ends-----------------------*/
+
+/*------------------------Section7 Starts (K-pop swag)-----------------------*/
+
+.container7{
+  position: relative;
+  margin: 30px 10px 10px 10px;
+}
+
+.container7 .carousel{
+ overflow: hidden;
+}
+
+.container7 .head5{
+    font-size: 32px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600; 
+    color: #fff;
+    margin:0px 0px 25px 30px;
+    text-shadow: 2px 3px 2px #48D1CC;
+}
+
+.container7 a{
+  text-decoration: none;
+  position: absolute;
+  right: 20px;
+  top: 28px;
+  color:#E0FFFF;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.container7 a:hover{
+  color: #fff;
+  text-decoration: underline;
+}
+
+.container7 .contain7{
+  display: flex;
+  margin:10px 10px 15px 20px;
+}
+
+.container7 .contain7 .box14{
+  margin: 5px 12px;
+  background: radial-gradient(circle farthest-side, #FFF0F5, #fff);
+  position: relative;
+}
+
+.container7 .contain7 .box14 i{
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  color: #000;
+}
+
+.container7 .contain7 .box14 img{
+    width:160px;
+    height:160px;
+    margin: 5px 5px 5px 5px;
+}
+
+.container7 .contain7 .box14 .btn14{
+  width:35px;
+  height:35px;
+  position: absolute;
+  top: 95px;
+  right: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container7 .contain7 .box14:hover .btn14{
+  cursor: pointer;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+.container7 .contain7 .box14 .info{
+  margin: 5px 5px 5px 5px;
+}
+
+.container7 .contain7 .box14 .info span{
+  font-size: 16px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #636FA4;
+  margin: 6px 0px;
+}
+
+.container7 .contain7 .box14 .info .singer{
+  font-size: 16px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  color: #202020;
+  margin: 2px 0px 6px 0px;
+}
+
+/*------------------------Section7 Ends (K-pop swag)-----------------------*/
+
+/*------------------------Section8 Starts (Playlists You May Like)-----------------------*/
+.container8{
+  position: relative;
+  margin: 70px 0px 30px 10px;
+}
+
+.container8 .carousel{
+  overflow: hidden;
+}
+
+.container8 .head6{
+  font-size: 32px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin:10px 0px 25px 20px;
+  text-shadow: 2px 3px 2px #87CEEB;
+}
+
+.container8 .contain8{
+   display: flex;
+   margin: 10px 8px;
+}
+
+.container8 .contain8 .box15{
+    margin:0px 6px;
+    width: 190px;
+    height: 310px;
+    position: relative;
+}
+
+.container8 .contain8 .box15 img{
+    width: 170px;
+    height: 160px;
+    margin: 10px 10px -4px 10px;
+}
+
+.container8 .contain8 .box15 i{
+  position: absolute;
+  top: 10px;
+  left:8px;
+  color: #000000;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  background: #87CEEB;
+  padding: 2px 6px;
+  opacity: 0.7;
+  border-bottom-right-radius: 5px;
+}
+
+.container8 .contain8 .box15 .btn15{
+  width:35px;
+  height:35px;
+  position: absolute;
+  top: 120px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.container8 .contain8 .box15 .content1{
+    margin: 0px 10px;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+    padding: 6px 6px;
+    background-image: linear-gradient(120deg, #D2B48C 0%, #D8BFD8 100%);
+}
+
+.container8 .contain8 .box15 .content1 span{
+     font-size: 16px;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-weight: 600;
+     color: #00ffff;
+     padding-left: 4px;
+}
+
+.container8 .contain8 .box15 .content1 .content2{
+  margin: 10px 0px;
+  font-size: 14px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  padding: 0px 4px;
+}
+
+/*------------------------Section8 Ends (Playlists You May Like)-----------------------*/
+
+/*------------------------Section9 Starts (Browse All Genres)-----------------------*/
+
+.container9{
+  position: relative;
+  margin:10px 0px 50px 10px;
+  width:100%;
+}
+
+.container9 .carousel1{
+   overflow: hidden;
+}
+
+.container9 .head7{
+  font-size: 32px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin:10px 0px 25px 20px;
+  text-shadow: 2px 3px 2px #87CEEB;
+}
+
+.container9 .contain9{
+   display: flex;
+   flex-wrap: wrap;
+   margin:10px 10px 10px 10px;
+}
+
+.container9 .contain9 .box16{
+  width:180px;
+  height:100px;
+  background-color: #4ca2cd;
+  margin: 10px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
+}
+
+.container9 .contain9 .box16 i{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.container9 .contain9 .box16 .genre{
+  position: absolute;
+  top:5px;
+  left: 55px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.container9 .contain9 .box16 .btn16{
+  position: absolute;
+  top: 65px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container9 .contain9 .box16 .cd{
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+  z-index: 999;
+  transform: rotate(-15.9deg);
+  border: 1px solid #fff;
+}
+
+.container9 .contain9 .box16:hover .btn16{
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*------------------------Section9 Ends (Browse All Genres)-----------------------*/
+
+/*------------------------Section10 Starts (Listen And Relax Mode)-----------------------*/
+  
+.container10{
+  position: relative;
+  margin:10px 0px 20px 10px;
+  padding-bottom: 50px;
+}
+
+.container10 .carousel1{
+  overflow: hidden;
+}
+
+.container10 .head8{
+  font-size: 34px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin:10px 0px 25px 20px;
+  text-shadow: 2px 3px 2px #87CEEB;
+}
+
+.container10 a{
+  text-decoration: none;
+  position: absolute;
+  right: 20px;
+  top: 28px;
+  color:#E0FFFF;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.container10 .contain10{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 10px 10px 10px;
+}
+
+.container10 .contain10 .box17{
+    margin: 10px 10px;
+    width: 140px;
+    height: 200px;
+    position: relative;
+}
+
+.container10 .contain10 .box17 i{
+    width:40px;
+    height:40px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top:12px;
+    left: 15px;
+    opacity: 0.8;
+}
+
+.container10 .contain10 .box17 #black{
+  opacity: 0.6;
+  color: #000;
+}
+
+.container10 .contain10 .box17 .btn17{
+  position: absolute;
+  top: 75px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.container10 .contain10 .box17 .track{
+   width:120px;
+   height:120px;
+   margin: 10px 8px -4px 8px;
+   border-radius: 5px;
+}
+
+.container10 .contain10 .box17 .info1{
+  background-color: #4ca1af;
+  padding: 6px 8px 6px 8px;
+  background-image: linear-gradient(to right,#8e9eab,#8e9eab);
+}
+
+.container10 .contain10 .box17 .info1 span{
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+.container10 .contain10 .box17 .info1 .musician{
+  font-size: 13px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 800;
+}
+
+/*------------------------Section10 Ends-----------------------*/
+
+/*------------------------Section11 Starts-----------------------*/
+
+.container11 .finalpicture11{
+  background-image:url(./images/photo20.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width:100%;
+  height:500px;
+  position: relative;
+}
+
+.finalpicture11 .quote1{
+  color:#136a8a;
+  position:absolute;
+  top:120px;
+  left:570px;
+  font-size:20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight:200;
+  line-height:40px;
+ }
+
+ .finalpicture11 i.fas.fa-quote-left{
+   position:absolute;
+   left:-26px;
+   color:#136a8a;
+   font-size:22px;
+ }
+
+ .finalpicture11 i.fas.fa-quote-right{
+  position:absolute;
+  bottom:4px;
+  color:#136a8a;
+  font-size:22px;
+  padding-left: 5px;
+}
+
+.finalpicture11 .justablock{
+   width:70px;
+   height:4px;
+   position:absolute;
+   top:270px;
+   right:280px;
+   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
+}
+
+.finalpicture11 .person{
+  position:absolute;
+  top:310px;
+  right:170px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  background: linear-gradient(to right,#DD2476,#0b8793,#FF512F,#DD2476);
+  -webkit-text-fill-color: transparent;
+   background-clip: text;
+}
+
+/*------------------------Section11 Ends-----------------------*/
+
+/*------------------------PlayerContainer Starts-----------------------*/
+
+
+.playerContainer{
+  position: relative;
+  top: 440px;
+  background-image: linear-gradient(to right,#4C516D,#4C516D);
+  color: #fff;
+  position: fixed;
+  top:544px;
+  bottom: 0;
+  z-index: 999;
+  height:58px;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+}
+
+.playerContainer .player{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin: 3px 3px 6px 3px;
+   padding: 0px 8px;
+   width: 1280px;
+}
+
+.playerContainer .player .box1{
+  display: flex;
+  align-items: center;
+  padding:4px;
+  margin: 0px 50px 0px 0px;
+}
+
+.playerContainer .player .box1 img{
+  width:45px;
+  height:45px;
+  margin-right: 4px;
+  margin-bottom: 3px;
+  border-radius: 4px;
+}
+
+.playerContainer .player .box1 .labels{
+ margin: 0px 0px 0px 10px;
+}
+
+.playerContainer .player .box1 .labels span{
+   font-size: 14px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: 500;
+}
+
+.playerContainer .player .box1 .labels p{
+  font-size: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.playerContainer .player .box2{
+  display: flex;
+  align-items: center;
+  margin: 0px 50px 0px 0px;
+}
+
+.playerContainer .player .box2 img{
+  width: 30px;
+  height: 30px;
+  margin: 0px 12px;
+  cursor: pointer;
+}
+
+.playerContainer .player .box2 #shuffle1{
+  width: 20px;
+  height: 20px;
+}
+
+.playerContainer .player .box2 #repeat1{
+  width: 22px;
+  height: 22px;
+}
+
+.playerContainer .player .box2 #play1{
+  width: 35px;
+  height: 35px;
+}
+
+.playerContainer .player .box2 #play2{
+  width: 30px;
+  height: 30px;
+}
+
+.playerContainer .player .box3{
+  display: flex;
+  align-items: center;
+}
+
+.playerContainer .player .box3 .start{
+  margin: 0px  5px;
+  
+}
+
+.playerContainer .player .box3 .progressContainer{
+  width: 158px;
+  height:4px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0px  5px;
+}
+
+.playerContainer .player .box3 .progress{
+  height:4px;
+  border-radius: 4px;
+  margin: 0px  0px;
+}
+
+.playerContainer .player .box3 .end{
+  margin: 0px  5px;
+}
+/*------------------------PlayerContainer Ends-----------------------*/
+
+.container2 ::-webkit-scrollbar{
+  width: 6px;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+  background: transparent; /* makes scrollbar transparent */
+}
+
+
+::-webkit-scrollbar-track{
+  background: #94B0B7;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #d7dde8;
+  border-radius:8px;
+}
+
+/*------------------------Playlist starts-----------------------*/
+
+.container123{
+   color: #fff;
+   width: 210px;
+   padding-bottom: 135px;
+   position: fixed;
+   top: 0px;
+   background-color: #000;
+   overflow-x: hidden;
+}
+
+.container123 .col1 .head{
+   padding-top:25px;
+   padding-bottom: 10px;
+}
+
+.container123 .col1 .head i{
+  font-size:21px;
+}
+
+.container123 .col1 .head span{
+  font-size:23px;
+}
+
+.transparent{
+  background-image: radial-gradient(circle 827px at 47.3% 48%,  rgba(255,255,255,1) 0%, rgba(216,191,216,1) 90%);
+  height:60px;
+  color:#fff;
+  width:1070px;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0px;
+  left:210px;
+  z-index: 999;
+  padding:12px 32px;
+  width:1070px;
+}
+
+.transparent i.fa-solid.fa-less-than{
+  padding:6px 10px;
+  border-radius:50%;
+  background-image: linear-gradient( 106.8deg,  rgba(117,255,220,1) 6%, rgba(163,216,255,1) 47.6%, rgba(248,215,251,1) 87.8% );
+  margin:0px 8px;
+  font-size:16px;
+  color: #fff;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+}
+
+.transparent i.fa-solid.fa-less-than:hover{
+  background-color: #c4e0e5;
+  color:#606c88;
+}
+
+.transparent i.fa-solid.fa-greater-than{
+  padding:6px 10px;
+  border-radius:50%;
+  background-image: linear-gradient( 106.8deg,  rgba(117,255,220,1) 6%, rgba(163,216,255,1) 47.6%, rgba(248,215,251,1) 87.8% );
+  margin:0px 8px;
+  font-size:16px;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+}
+
+.transparent span{
+ font-weight:500;
+ font-family:fantasy;
+ color: #136a8a;
+ font-size:23px;
+ padding-left:8px;
+ letter-spacing:0.8px;
+}
+
+.transparent i.fi.fi-rr-user{
+  position:absolute;
+  top:13.5px;
+  right:143px;
+  font-size:16px;
+  padding:3px 5px;
+  z-index: 999;
+  font-weight: 700;
+  background-image: linear-gradient( 109.6deg,  rgba(177,173,219,1) 11.2%, rgba(245,226,226,1) 91.1% );
+  border-radius: 50%;
+  color: #000;
+}
+
+.transparent .up{
+  position:absolute;
+  right:185px;
+  color:#fff;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding:6px 15px 6px 15px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient( 1.3deg,  rgba(91,117,163,1) 11.4%, rgba(68,98,128,1) 77% );
+}
+
+.transparent .user{
+  position:absolute;
+  right:90px;
+  color:#434343;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding:6px 15px 6px 35px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: linear-gradient( 91.7deg,  rgba(252,190,224,1) 16.8%, rgba(212,254,218,1) 103.6% );
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.4);
+}
+
+.transparent .fa-solid.fa-ellipsis{
+   display:none;
+}
+
+.container4561{
+   display:none;
+}
+
+.container456{
+  color: #fff;
+  position: relative;
+  left: 210px;
+  height:320px;
+  width:1070px;
+  padding-top: 50px;
+}
+
+.container456 .artist{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+ }
+
+ .container456 .artist .support{
+  position: relative;
+  }
+
+.container456 .artist img{
+ width:200px;
+ height: 200px;
+ margin:0px 10px 0px 30px;
+ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+}
+
+.container456 .artist i{
+ position:absolute;
+ top: 8px;
+ left: 40px;
+ opacity: 0.9;
+ color: #fff;
+ }
+
+ .container456 .artist .onimage{
+  position:absolute;
+  bottom:0px;
+  left: 30px;
+  width: 200px;
+  height: 8px;
+  background-color: #002244;
+  }
+
+.container456 .artist .info{
+ margin: 0px 10px 0px 10px;
+ }
+
+ .container456 .artist .info span{
+     font-size:14px;
+     font-weight:500;
+  }
+
+  .container456 .artist .info .mix{
+    font-size:65px;
+    font-weight: 700;
+ }
+
+ .container456 .artist .info .artists{
+    font-size:15px;
+}
+
+.container789{
+  position:relative;
+  width:1070px;
+  left: 210px;
+  background: linear-gradient(360deg,#030303 10%,#1f1f1f 360%);
+  padding-bottom: 50px;
+}
+
+.container789 .bottom{
+  display: none;
+}
+
+.container678{
+  margin:0px 0px 10px 0px;
+  background: linear-gradient(360deg,#030303 10%,#1f1f1f 360%);
+  padding:10px 0px 0px 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  top:60px;
+  z-index:999;
+}
+
+.container678 .head{
+  display: flex;
+  width: 1070px;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+.container678 .head .hash{
+  margin:0px 20px 0px 50px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container678 .head .TITTLE{
+  margin:0px 0px 0px 25px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container678 .head .ALBUM{
+  margin:0px 0px 0px 245px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container678 .head .ARTIST{
+  margin:0px 0px 0px 190px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container678 .head .DURATION{
+  margin:0px 0px 0px 220px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+hr{
+  border: 0.2px dotted #ccc;
+  color: #ccc;
+  margin: 10px 0px 10px 0px;
+}
+
+.container89{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+  margin: 0px 10px 0px 10px;
+  box-shadow:0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  padding:6px 0px;
+  border-radius:7px;
+  color:#E0E0E0;
+}
+
+.container89 .fa-solid.fa-ellipsis-vertical{
+   display:none;
+}
+
+.container89 .playB{
+  position:relative;
+  cursor: pointer;
+}
+
+.container89 .playB img{
+   width:25px;
+   height:25px;
+   position:absolute;
+   top: -12px;
+   left: 4px;
+}
+
+.container89 .id{
+  margin:0px 20px 0px 50px;
+ 
+}
+
+.container89 .cover{
+  margin:0px 0px 0px 20px;
+}
+
+.container89 .cover img{
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.container89 .cover span{
+  margin:0px 6px;
+  position: relative;
+  top: -20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 2.5px;
+  font-size:16px;
+  font-weight: 600;
+}
+
+.container89 .al{
+  position:absolute;
+  left: 390px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16.5px;
+  font-weight:600;
+}
+
+.container89 .ar{
+  position:absolute;
+  left: 630px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16.5px;
+  font-weight: 600;
+}
+
+.container89 .duration{
+  position:absolute;
+  right: 130px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:17px;
+  font-weight: 500;
+}
+
+.container89 .point{
+  position:absolute;
+  right: 50px;
+}
+
+.devices{
+ position:fixed;
+ bottom:-350px;
+ left:700px;
+ width:280px;
+ height:320px;
+ background:#86a8e7;
+ text-align: center;
+ padding: 30px 0px 0px 0px;
+ transition: all 0.3s;
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ z-index: 999;
+}
+
+.devices #closebtn{
+     width:23px;
+     height:23px;
+     position:absolute;
+     top:0;
+     left:0;
+}
+
+.devices .connect{
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-size: 20px;
+   font-weight: 700;
+}
+
+.devices .play{
+  font-family:Cambria, Cochin, Georgia, Times;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.devices .more{
+   margin-top:23px;
+   background-color: #fcb045;
+   padding:8px 12px;
+   outline: none;
+   border: none;
+   border-radius: 20px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight:700;
+   cursor: pointer;
+   color: #fff;
+}
+
+.information{
+  position:fixed;
+  right:-200px;
+  bottom:140px;
+  width:200px;
+  height:280px;
+  padding: 20px 10px 0px 10px;
+  transition: all 0.3s;
+  border-radius: 5px;
+  z-index: 999;
+  background-image:url('./images/con52.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  color:#fff;
+  text-shadow: 2px 2px 2px rgba(0,0,0, 0.9);
+ }
+
+ .information p{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:14.5px;
+    font-weight:600;
+    margin:15px 0px;
+    cursor: pointer;
+    color:#fff;
+ }
+
+ .information .zipit{
+    position:absolute;
+    right:10px;
+    font-size:20px;
+    top:5px;
+    box-shadow:0px 0px 0px 0px rgba(0,0,0,0);
+    color:#fff;
+ }
+ 
+
+/*------------------------Playlist Ends-----------------------*/
+
+/*------------------------Signin starts-----------------------*/
+
+.logincontainer{
+  background-image:url(./images/des8.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logincontainer img{
+     position: absolute;
+     top: 30px;
+     left:20px;
+     width:50px;
+     height:50px;
+}
+
+.logincontainer .loginC{
+  background-image:linear-gradient(147deg,lightseagreen,beige);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:350px;
+  color: #00ffff;
+  padding:10px 0px 30px 0px;
+  box-shadow:0px 0px 8px px rgba(0,0,0,0.8);
+  border-radius: 8px;
+}
+
+.logincontainer .loginC .logoM{
+  margin:10px 0px 10px 0px;
+}
+
+.loginC .logoM i{
+  color: #fff;
+  font-size: 20px;
+}
+
+.loginC .logoM span{
+   font-size:20px;
+   font-weight:700;
+   margin-left:5px;
+}
+
+.formcontainer{
+  position: relative;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form input{
+  margin:10px 0px 10px 0px;
+  padding:8px 5px 8px 12px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+form input::placeholder{
+  color:grey;
+  opacity: 0.5;
+}
+
+form small{
+  color: #002244;
+}
+
+form i{
+  position: absolute;
+  top:175px;
+  right:15px;
+  font-size: 12px;
+  color:#605C3C;
+  cursor: pointer;
+}
+
+form button{
+  margin:10px 0px 10px 0px;
+  padding:6px 0px 6px 0px;
+  border-radius: 20px;
+  border: none;
+  background-color: #000;
+  color: aqua;
+  font-size: 16px;
+  letter-spacing:0.5px;
+  cursor: pointer;
+}
+
+form .redirect{
+  color: #000;
+  font-size: 13px;
+  text-align: center;
+  margin-top:8px;
+}
+
+form .link{
+  margin-left: 5px;
+  font-size: 13px;
+  color:orangered;
+  font-weight: 500;
+}
+
+form a{
+ text-decoration: none;
+}
+
+form .link:hover{
+  font-weight:500;
+  text-decoration:underline;
+}
+
+
+
+/*------------------------Signin Ends-----------------------*/
+
+/*------------------------Login Starts-----------------------*/
+
+form .efield{
+  width:260px;
+  margin:15px 0px;
+ }
+ 
+ form .pfield{
+   width:260px;
+   margin-bottom:20px;
+  }
+ 
+ form #eye{
+   position:absolute;
+   top:80px;
+  }
+
+/*------------------------Login Ends-----------------------*/
+
+/*------------------------Home Starts-----------------------*/
+
+.container120{
+  position: fixed;
+  top:0;
+  bottom: 100px;
+  background-color: #000;
+  height: 100px;
+  width: 100%;
+  overflow-x:hidden;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.container120 .wrapper{
+  padding: 26px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.wrapper .logo i{
+  color: #fff;
+  font-size: 21px;
+}
+
+.wrapper .logo span{
+  color:aqua;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 6px 8px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper .fa.fa-bars{
+  color: #fff;
+  font-size: 21px;
+  cursor: pointer;
+  display: none;
+}
+
+.wrapper .fa.fa-times{
+  color: #fff;
+  font-size: 21px;
+  cursor: pointer;
+  display: none;
+}
+
+.tabs span{
+  color: #fff;
+  font-size: 18px;
+  font-weight:500;
+  margin:0px 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing:0.5px;
+  position:relative;
+  z-index: 999;
+}
+
+.tabs a{
+  text-decoration: none;
+}
+
+.poster{
+  position:relative;
+  top:100px;
+  height: 550px;
+  background-image: url('./images/con2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  width:100%;
+}
+
+ .phrase{
+  position: absolute;
+  top:130px;
+  left:60px;
+  font-size: 50px;
+  font-weight:500;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color:#fff;
+  backdrop-filter: blur(2px);
+  background: transparent;
+  text-shadow: 2px 2px 4px #000;
+ } 
+
+ .phrase1{
+  position:absolute;
+  top:200px;
+  left:60px;
+  font-size:18px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:600;
+  margin-top:10px;
+  color:rgba(242,245,139,1);
+  backdrop-filter: blur(3px);
+  background: transparent;
+  text-shadow: 1.5px 1.5px 1.5px #000;
+} 
+
+.poster .btn1{
+  position:absolute;
+  top:240px;
+  left:60px;
+  color:#fff;
+  padding:8px 12px;
+  outline: none;
+  border: none;
+  background-color:#000000;
+  border-radius:22px;
+  cursor: pointer;
+  margin-top:20px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:14px;
+ }
+
+.posterpic{
+  position:relative;
+  top:60px;
+  display: flex;
+  flex-wrap: wrap;
+  height:480px;
+  width:100%;
+}
+
+.posterpic .part1{
+  background-image:url(./images/con22.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  position:absolute;
+  width:600px;
+  height:420px;
+}
+
+.posterpic .part2{
+  background-image: linear-gradient(to right,#93F9B9,#4CB8C4);
+  position:absolute;
+  left:600px;
+  width:680px;
+  height:420px;
+  padding: 120px 0px 0px 50px;
+ }
+
+ .phrase2{
+  color:#fff;
+  font-size: 45px;
+  font-weight:300;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.phrase3{
+  color:#2c3e50;
+  font-size:18px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight:600;
+}
+
+.posterpic .btn2{
+  margin-top:20px;
+  color:#fff;
+  outline: none;
+  border: none;
+  background-color:#000000;
+  border-radius:22px;
+  padding:8px 14px;
+  cursor:pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:14px;
+  font-weight: 500;
+ }
+
+.picture{
+  position:relative;
+  background-image:url(images/ava77.jpg);
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+  height:500px;
+  padding:100px 0px 0px 200px;
+  width:100%;
+}
+
+ .picture .quote{
+  color:#fff;
+  font-size:82px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:500;
+ }
+
+ .picture .free{
+   margin-top:10px;
+   background:#000;
+   padding:10px 15px;
+   border: none;
+   outline: none;
+   border-radius:25px;
+   color:#fff;
+   font-weight: 800;
+   cursor: pointer;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+
+ .picture .terms{
+   margin-top:20px;
+  color:#fff;
+  font-size:12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*---------------------------------Home Ends-------------------------------------------*/
+
+/*--------------------------------Footer Starts------------------------------------------*/
+
+ .footer{
+   background-color: #000;
+   color: #fff;
+   position: relative;
+   top:0px;
+   bottom: 10px;
+   padding:80px 0px 40px 0px;
+ }
+
+.footer1{
+   display:flex;
+   align-items:center;
+   justify-content:space-evenly;
+}
+
+.footer1 div p{
+  margin-bottom:20px;
+  font-size: 18px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:500;
+  color: #E0EAFC;
+}
+
+.footer1 div .section a{
+ text-decoration: none;
+}
+
+.footer1 div .section li{
+  list-style: none;
+  padding:3px 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:15px;
+  font-weight:500;
+  background: linear-gradient( 90.9deg,  rgba(255,187,187,1) -8.8%, rgba(255,220,177,1) 12.4%, rgba(255,249,177,1) 35.6%, rgba(220,255,177,1) 59.6% );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer1 div .section li:hover{
+ color: #83a4d4;
+}
+
+.section li i.fa-brands.fa-youtube{
+  margin-right:10px;
+  background: linear-gradient(to right,red, red);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 18px;
+}
+
+.section li i.fa-brands.fa-twitter{
+  margin-right:10px;
+  background: linear-gradient(to right,#2bc0e4, #2bc0e4);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 18px;
+}
+
+.section li i.fa-brands.fa-instagram-square{
+  margin-right:10px;
+  font-size: 18px;
+  background: linear-gradient(to right,#833ab4, #fd1d1d, #fcb045);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section li i.fa-brands.fa-facebook{
+  margin-right:10px;
+  background: linear-gradient(to right,dodgerblue, dodgerblue);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 18px;
+}
+
+.section li i.fa-brands.fa-whatsapp-square{
+  margin-right:10px;
+  color:#25D366;
+  background: linear-gradient(to right,#25D366, #25D366);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 18px;
+}
+
+.section li i.fa-brands.fa-reddit{
+  margin-right:10px;
+  background: linear-gradient(to right,#ff4500, #ff4500);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 18px;
+}
+
+.footerline{
+  margin:60px 0px 40px 0px;
+  color:#ccc;
+}
+
+.logo{
+  text-align:center;
+}
+
+.logo i{
+  color: #fff;
+  font-size: 21px;
+}
+
+.logo span{
+  color:aqua;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 6px 8px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.texts{
+  margin: 20px 0px 30px 0px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.texts div{
+ margin:0px 10px;
+ font-size: 12px;
+ color: #fff;
+}
+
+.texts a{
+  text-decoration: none;
+ }
+
+
+/*-------------------------------------Footer Ends------------------------------------------*/
+
+/*-----------------------------------Extras Starts----------------------------------------------------*/
+
+.container40{
+  width:100%;
+  height:100px;
+  background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+  position:fixed;
+  top:0px;
+  bottom:100px;
+  z-index:999;
+}
+.container40 .wrapper1{
+    position:relative;
+    width:100%;
+    background-color: #000;
+    height:100px;
+}
+
+.container40 .wrapper1 i.fi.fi-rr-headset{
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  left:62px;
+  top:30px;
+}
+
+.container40 .wrapper1 span{
+  color:aqua;
+  font-size: 35px;
+  font-weight: 600;
+  padding: 6px 8px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  top:20px;
+  left:100px;
+}
+
+.container40 .wrapper1 .out{
+  color: #000;
+  font-size: 18px;
+  position: absolute;
+  right:110px;
+  top:30px;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
+  padding:5px 13px 5px 13px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:800;
+  border-radius: 20px;
+}
+
+.selena{
+  position:relative;
+  top:100px;
+  width:100%;
+  height:350px;
+}
+
+.block{
+  position:relative;
+  height:320px;
+  background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+  margin:-120px 190px 40px 190px;
+  border-radius:35px;
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.6);
+  text-align:center;
+}
+
+.block .limits{
+  padding-top: 80px;
+  font-size:40px;
+  font-weight:600;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.block .users{
+  margin-top:20px;
+  font-size:16px;
+  color:#fff;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:600;
+}
+
+.block .btn3{
+  margin-top: 20px;
+  background:#000;
+  color:#fff;
+  border-radius:35px;
+  border:none;
+  outline:none;
+  font-weight:700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor:pointer;
+  padding:8px 14px;
+}
+
+.block .terms{
+  text-align:center;
+  margin-top: 10px;
+  font-size:12px;
+  text-decoration:underline;
+  color:#434343;
+  cursor:pointer;
+}
+
+/*-----------------------------------Extras Ends----------------------------------------------------*/
+
+/*-----------------------------------Premium Starts----------------------------------------------------*/
+
+.container41{
+  margin:10px 0px 10px 0px;
+  background-image: linear-gradient(to right, #0052D4,#65C7F7);
+  width:100vw;
+  height:300px;
+}
+
+.container41 .pre{
+  font-size:45px;
+  color:#fff;
+  padding: 30px 0px 0px 0px;
+  text-align:center;
+  font-weight:700;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container41 .listen{
+  font-size:22px;
+  color:#fff;
+  padding:10px 0px 20px 0px;
+  text-align:center;
+  font-weight:500;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container41 .cardlogos{
+  margin:10px 0px 0px 0px;
+  text-align:center;
+}
+
+.container41 .cardlogos img{
+  padding:0px 4px;
+  width:50px;
+  height:25px;
+}
+
+.containP .deals{
+  margin:40px 10px 0px 10px;
+  background-image:url('./images/plant.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius:5px;
+}
+
+.deals .carousel5{
+  overflow:hidden;
+}
+
+.deals .cards{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding:40px 0px 120px 0px;
+}
+
+.deals .cards .col1{
+  width:260px;
+  height:450px;
+  background-image: linear-gradient(to right, #757F9A,#D7DDE8);
+  padding:8px 3px 0px 22px;
+  margin:0px 12px;
+  border-radius:7px;
+}
+
+.cards .col1 .number{
+  font-size:26px;
+  font-weight:600;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin:6px 0px 8px 0px;
+}
+
+.cards .col1 .price{
+  font-size:20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:500;
+  margin:6px 0px 8px 0px;
+}
+
+.cards .col1 .account{
+  font-size:20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:500;
+  margin:6px 0px 8px 0px;
+}
+
+.col1 hr{
+  width:95%;
+  border-color:#B3FFAB;
+}
+
+.cards .col1 .plans{
+  margin:12px 0px;
+}
+
+.cards .col1 .plans ul {
+  margin:30px 0px 30px 0px;
+  max-height:120px;
+}
+
+.cards .col1 .plans ul li{
+  font-size:16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  margin:10px 0px 10px 1em;
+}
+
+.cards .col1 button{
+  margin:35px 0px 20px 0px;
+  padding:8px 15px;
+  background-color: #000;
+  border-radius:22px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:500;
+}
+
+.cards .col1 .terms{
+  font-size:12px;
+  text-decoration: underline;
+  cursor: pointer;
+  color:#fff;
+}
+
+/*-----------------------------------Premium Ends----------------------------------------------------*/
+/*-----------------------------------Support starts----------------------------------------------------*/
+
+.container02{
+  background-image: linear-gradient(to right,#c2e59c,#64b3f4);
+  height:350px;
+  width:100vw;
+  color:#fff;
+  margin-bottom:30px;
+  padding:15px 0px;
+}
+
+.container02 .help{
+  font-size:45px;
+  color:#fff;
+  text-align:center;
+  padding-top:20px;
+}
+
+.container02 input{
+  padding:8px 250px 10px 10px;
+  margin:30px 0px 30px 420px;
+  outline: none;
+  border: none;
+  border-radius:20px;
+  backdrop-filter: blur(4px);
+  background:linear-gradient(rgba(255,255,255,0.3));
+}
+
+.container02 i{
+    margin-left: -25px;
+    font-size:14px;
+    color:#000;
+    position: relative;
+    top:3px;
+    font-weight: bold;
+}
+
+.container02 input::placeholder{
+  font-size: 12px;
+  color:#8e9eab;
+}
+
+.container02 .helpagain{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:40px;
+}
+
+.container02 .helpagain .help1{
+  margin:0px 16px;
+}
+
+.container02 .helpagain .help2{
+  margin:0px 16px;
+}
+
+.container02 .helpagain .help3{
+  margin:0px 16px;
+}
+
+.mainprob{
+  color:#ffffff;
+  margin: 2px 0px;
+  font-size: 14px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.subprob{
+  color: #030303;
+  margin: 8px 0px;
+  font-size: 16px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+/*-----------------------------------Support Ends----------------------------------------------------*/
+
+/*-----------------------------------Download starts----------------------------------------------------*/
+.container03{
+  background:linear-gradient(147deg,#B24592,#F15F79);
+  height:350px;
+  width:100vw;
+  color:#fff;
+  margin-bottom: 30px;
+}
+
+.container03 .title{
+  font-size:45px;
+  padding:58px 0px 20px 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight:600;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container03 .sub{
+  font-size:25px;
+  padding:20px 0px 20px 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight:600;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container03 .logos{
+  margin:30px 0px 0px 0px;
+  text-align: center;
   }
+
+.container03 .logos img{
+width:140px;
+height:50px;
+margin:0px 8px;
+cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*---------------------Track Starts--------------------------*/
+.transparent12{
+  background-image: radial-gradient( circle 974px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(0,0,0,1) 56.6% );
+  width:1070px;
+  position: fixed;
+  top:0px;
+  left:210px;
+  height:60px;
+  z-index: 999;
+}
+
+.transparent12 i.fa-solid.fa-ellipsis-vertical{
+  display:none;
+}
+
+.transparent12 i.fa-solid.fa-less-than{
+  position:absolute;
+  left:30px;
+  top:15px;
+  border-radius:50%;
+  background-image: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
+  padding:5px 7px;
+  color:#fff;
+}
+
+.transparent12 i.fa-solid.fa-less-than:hover{
+  color:#636FA4;  
+}
+
+.transparent12 .heading{
+    position:absolute;
+    top:16px;
+    left:60px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 10px;
+    color:#007991;
+}
+
+.trackContainer .imgcontainer1{
+   display:none;
+   width:1070px;
+   height:100vh;
+}
+
+.imgcontainer{
+  position: relative;
+  left:210px;
+  top:60px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height:600px;
+  overflow-x: hidden;
+  width:1070px;
 }
 
-.App-link {
-  color: #61dafb;
+.imgcontain{
+  flex-basis: 50%;
+  position:absolute;
+  top:0;
+  left:0px;
+  width:535px;
+  height:600px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.8);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.imgcontain img{
+  width:535px;
+  height:600px;
+}
+
+.imgcontainer .trackdetails{
+  flex-basis: 50%;
+  position:absolute;
+  top:0px;
+  left:535px;
+  width:535px;
+  height:600px;
+  color:#000;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+  background-image: url('./images/con19.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.trackdetails .dford{
+   padding:20px 0px 0px 35px;
+}
+
+.dford .det1{
+   font-size:50px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight:500;
+   margin-top: 10px;
+   color:#fff;
+}
+
+.dford .det2{
+  font-size:35px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:500;
+  margin-top: 5px;
+  color:#fff;
+}
+
+.dford .det3{
+  font-size:16px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:600;
+  margin-top: 8px;
+  color:#fff;
+}
+
+.dford .det4{
+  font-size:16px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:600;
+  margin-top: 12px;
+  color:#fff;
+}
+
+.trackdetails .playerContainer1{
+  background-image: linear-gradient(to right,#4C516D,#4C516D);
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  height:58px;
+  width:100%;
+}
+
+.trackdetails .playerContainer1 .player1{
+   display: flex;
+   width:535px;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.trackdetails .playerContainer1 .player1 .box1{
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-start;
+   padding:8px 0px;
+}
+
+.trackdetails .playerContainer1 .player1 .box1 img{
+   width:42px;
+   height:42px;
+   border-radius: 4px;
+}
+
+.trackdetails .playerContainer1 .player1 .box1 .labels span{
+  font-size:14px;
+  padding-left: 3px;
+}
+
+.trackdetails .playerContainer1 .player1 .box1 .labels p{
+  font-size:12px;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.trackdetails .playerContainer1 .player1 .box2 img{
+  width:35px;
+  height:35px;
+  cursor: pointer;
+}
+
+.trackdetails .playerContainer1 .player1 .box3{
+  display: flex;
+  justify-content:space-around;
+  padding:8px 0px;
+}
+
+.trackdetails .playerContainer1 .player1 .box3 .start{
+  font-size:16px;
+}
+
+.trackdetails .playerContainer1 .player1 .box3 img{
+  display:none;
+}
+
+.trackdetails .playerContainer1 .player1 .box3 .end{
+  font-size:16px;
+}
+
+.trackdetails .playerContainer1 .player1 .box3 .progressContainer{
+  width: 148px;
+  height:4px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 7px  5px;
+}
+
+.trackdetails .playerContainer1 .player1 .box3 .progress{
+  height:4px;
+  border-radius: 4px;
+  margin: 0px  0px;
+}
+
+/*---------------------Track Ends--------------------------*/
+
+/*-----------------------------------Responsiveness starts----------------------------------------------------*/
+
+@media(max-width:700px){
+
+ ::-webkit-scrollbar{
+     display:none;
   }
-  to {
-    transform: rotate(360deg);
+  
+/*---------------------Home--------------------------*/
+
+.tabs span{
+  display: block;
+  padding: 16px 0px 16px 8px;
+  font-size:19px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:500;
+  color: #fff;
+}
+
+.tabs span:hover{
+  background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );
+  color: #000;
+}
+
+.tabs{
+  position: fixed;
+  background: #136a8a;
+  height: 500px;
+  width: 200px;
+  top: 100px;
+  right:-200px;
+  text-align: left;
+  z-index:999;
+  transition: 1s;
+  background-image: radial-gradient( circle 674px at 18.3% 77%,  rgba(139,186,244,1) 3.4%, rgba(15,51,92,1) 56.6% );
   }
+
+  .tabs .slash{
+    display: none;
+  }
+
+.wrapper .fa.fa-bars{
+  display: block;
+  color: #fff;
+  margin: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.wrapper .fa.fa-times{
+  display: block;
+  color: #fff;
+  margin: 10px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.wrapper{
+  padding:30px;
+}
+
+.poster{
+  position: relative;
+}
+
+.poster .phrase{
+  font-size: 32px;
+  position: absolute;
+  left: 20px;
+  margin-right: 10px;
+}
+
+.poster .phrase1{
+  position: absolute;
+  top:230px;
+  left: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+  color:#FFD200;
+  backdrop-filter: blur(3px);
+  background: transparent;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.poster .btn1{
+  position: absolute;
+  top:320px;
+  left: 20px;
+  background-image: linear-gradient( 123.5deg,  rgba(244,219,251,1) 29.3%, rgba(255,214,214,1) 67.1% );
+  color: #434343;
+}
+
+.posterpic{
+  width:100%;
+}
+
+.posterpic .part1{
+  position:absolute;
+  background-image: url(./images/con22.jpg);
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size:cover;
+  width:50%;
+ }
+ 
+ .posterpic .part2{
+   background-image: linear-gradient(to right,#93F9B9,#4CB8C4);
+   position:absolute;
+   left:50%;
+   width:50%;
+  }
+
+  .phrase2{
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+
+  .phrase3{
+    font-size: 14px;
+  }
+
+  .posterpic .btn2{
+    padding:8px 14px;
+    font-size:12px;
+    font-weight: 500;
+   }
+
+   .picture{
+    height:400px;
+    width:100%;
+    position:relative;
+    padding:100px 0px 0px 30px;
+  }
+  
+   .picture .quote{
+    color:#fff;
+    font-size:42px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:500;
+   }
+  
+   .picture .free{
+     background:#000;
+     padding:10px 15px;
+     margin-top: 20px;
+   }
+  
+   .picture .terms{
+    color:#fff;
+    font-size:12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+  }
+
+/*---------------------Footer--------------------------*/
+ .footer1{
+    display:flex;
+    flex-direction: column;
+ }
+
+ .footer1 .section{
+  margin:8px 0px 16px 0px
+}
+
+.footer1 div p{
+  margin-bottom:2px;
+  font-size: 18px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:500;
+  color: #E0EAFC;
+}
+
+.footer1 div.first{
+  margin-left:-45px;
+  margin-bottom:10px;
+}
+
+.footer1.div.second{
+  margin-bottom:10px;
+}
+
+.footer1.div.third{
+  margin-bottom:10px;
+}
+
+.footer1 div.fourth{
+  margin-left:-45px;
+  margin-bottom:10px;
+}
+
+/*---------------------Dashboard--------------------------*/
+
+.wrapper .logo span{
+    font-size: 25px;
+}
+
+.wrapper .searchbar input{
+ display: none;
+}
+
+.searchbar i{
+  display: none;
+}
+
+.contain2 .col1{
+  width:200px;
+  transition:1s;
+  position:fixed;
+  left:-200px;
+  top:100px;
+  z-index: 9999;
+}
+
+.wrapper .account{
+   position: relative;
+}
+
+.wrapper .account .name{
+  display: block;
+  color:#000;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding:6px 10px 7px 35px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.wrapper .account i.fi.fi-rr-user{
+  font-size:16px;
+  color:#fff;
+  background-image: linear-gradient( 109.6deg,  rgba(96,221,142,1) 11.2%, rgba(24,138,141,1) 91.1% );
+  border-radius:50%;
+  position: absolute;
+  top:1.3px;
+  left:2px;
+  padding:4px 5px;
+}
+
+.col1 .head{
+  position: relative;
+}
+
+
+.head i.fi-rr-list{
+  display: none;
+}
+
+.head i.fa-solid.fa-circle-xmark{
+    font-size: 25px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    color: #E9E4F0;
+}
+
+.head i.fi-rr-headset{
+  padding-left: 40px;
+}
+
+.head span{
+  font-size: 20px;
+  padding-left: 5px;
+  color:aqua;
+}
+
+.container2 .options{
+  height:170px;
+}
+
+.options .set{
+  display:block;
+}
+
+.container2 .contain2{
+   width:100%;
+   background:linear-gradient(147deg,rgba(159,188,198,1),rgba(159,188,198,1));
+}
+
+.contain2 .col2{
+  width:100%;
+  margin-top: 20px;
+}
+
+.col2 p{
+  font-size: 27px;
+  margin: 16px 10px 10px 10px;
+}
+
+.container92{
+  margin:10px 0px 0px 10px;
+}
+
+.col2 .container92 .carousel1{
+  overflow:hidden;
+}
+
+.col2 .boxes{
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 20px 0px 50px 20px;
+  width:1900px;
+}
+
+.boxes .box1{
+  width:280px;
+  height:90px;
+  margin:0px 10px 10px 10px;
+  position: relative;
+}
+
+.boxes span{
+  position: relative;
+  top:-40px;
+  left: 20px;
+  font-size: 16px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  color:#2F4F4F;
+}
+
+.boxes .playbtn{
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right:20px;
+  top: 25px;
+}
+
+.container3 .contain3{
+  width:100%;
+  position: relative;
+}
+
+.contain3 .head1{
+  font-size: 25px;
+  margin: 0px 0px 30px 10px;
+}
+
+.contain3 .carousel{
+  overflow: hidden;
+}
+
+.contain3 a{
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  font-size: 13px;
+}
+
+.container3 .contain3 .boxcontainer{
+  display: flex;
+  margin: 8px 8px 50px 0px;
+  width:100%;
+  transition: all 0.2s;
+  
+}
+
+.contain3 .boxcontainer .box11{
+  min-width: 200px;
+  min-height: 300px;
+  position: relative;
+}
+
+.boxcontainer .box11 img{
+  width: 180px;
+  height: 180px; 
+}
+
+.contain3 .boxcontainer .box11 .btn{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 128px;
+ }
+
+ .container4 .carousel{
+  overflow: hidden;
+  }
+
+  .container4 .head2{
+    font-size: 25px;
+    margin: 0px 0px 20px 10px;
+  }
+  
+  .container4 a{
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    font-size: 13px;
+  }
+  
+  .container4 .contain4{
+    display: flex;
+    margin:10px 10px 25px 10px;
+  }
+  
+  .container4 .carousel{
+  overflow: hidden;
+  }
+  
+  .contain4 .circles{
+      margin: 0px 16px;
+      position: relative;
+  }
+  
+  .contain4 .circles img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .contain4 .circles .play6{
+    width: 45px;
+    height: 45px;
+  }
+  
+  .container5 .contain5{
+  margin: 50px 0px 30px 10px;
+  position: relative;
+  }
+
+  .contain5 .carousel{
+    overflow: hidden;
+  }
+  
+  .contain5 .head3{
+  font-size: 26px;
+  margin: 0px 0px 25px 10px;
+  }
+  
+  .contain5 a{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 13px;
+  }
+  
+  .container5 .contain5 .boxcontainer{
+    display: flex;
+    margin: 8px 8px 40px 0px;
+    
+  }
+  
+  .contain5 .boxcontainer .box12{
+    width: 200px;
+    height: 325px;
+  }
+
+  .boxcontainer .box12 img{
+    width: 180px;
+    height: 180px; 
+  }
+
+  .container6{
+    position: relative;
+    margin:10px 0px 25px 10px;
+  }
+
+  .container6 .carousel1{
+     overflow: hidden;
+  }
+  
+  .container6 .head4{
+    margin: 10px 0px 20px 10px;
+    font-size: 28px;
+  }
+  
+  .container6 .contain6{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px 10px 10px 10px;
+  }
+  
+  .container6 .contain6 .box13{
+    margin: 8px 15px;
+    position: relative;
+  }
+  
+  .contain6 img {
+    width:170px;
+    height:170px;
+  }
+
+  .container7{
+    position: relative;
+    margin: 30px 0px 30px 10px;
+  }
+
+  .container7 .carousel{
+    overflow: hidden;
+   }
+  
+  .container7 .head5{
+      font-size: 29px;
+      margin:0px 0px 20px 16px;
+  }
+  
+  .container7 a{
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 13px;
+  }
+  
+  .container7 .contain7{
+    display: flex;
+    margin:10px 25px 15px 10px;
+  }
+  
+  .container7 .contain7 .box14{
+    margin: 5px 12px;
+    background: radial-gradient(circle farthest-side, #FFF0F5, #fff);
+    position: relative;
+  }
+  
+  .container7 .contain7 .box14 img{
+      width:160px;
+      height:160px;
+  }
+
+  .container8{
+    position: relative;
+    margin: 70px 0px 30px 10px;
+  }
+
+  .container8 .carousel{
+     overflow: hidden;
+  }
+  
+  .container8 .head6{
+    font-size: 29px;
+    margin:10px 0px 25px 10px;
+    text-shadow: 2px 3px 2px #87CEEB;
+  }
+  
+  .container8 .contain8{
+     display: flex;
+     margin: 10px 8px;
+  }
+  
+  .container8 .contain8 .box15{
+      margin:0px 6px;
+      width: 190px;
+      height: 310px;
+      position: relative;
+  }
+  
+  .container8 .contain8 .box15 img{
+      width: 170px;
+      height: 160px;
+      margin: 10px 10px -4px 10px;
+  }
+  
+  .container8 .contain8 .box15 i{
+    position: absolute;
+    top: 10px;
+    left:8px;
+    color: #000000;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background: #87CEEB;
+    padding: 2px 6px;
+    opacity: 0.7;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .container8 .contain8 .box15 .btn15{
+    width:35px;
+    height:35px;
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .container8 .contain8 .box15 .content1{
+      margin: 0px 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+      padding: 6px 6px;
+      background-image: linear-gradient(120deg, #D2B48C 0%, #D8BFD8 100%);
+  }
+  
+  .container8 .contain8 .box15 .content1 span{
+       font-size: 16px;
+       font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       font-weight: 600;
+       color: #00ffff;
+       padding-left: 4px;
+  }
+  
+  .container8 .contain8 .box15 .content1 .content2{
+    margin: 10px 0px;
+    font-size: 14px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    padding: 0px 4px;
+  }
+
+  .container9{
+    position: relative;
+    margin:10px 0px 50px 10px;
+  }
+  
+  .container9 .carousel1{
+     overflow: hidden;
+  }
+  
+  .container9 .head7{
+    font-size: 32px;
+    margin:10px 0px 25px 10px;
+  }
+  
+  .container9 .contain9{
+     display: flex;
+     flex-wrap: nowrap;
+     margin:10px 10px 10px 10px;
+     width:2000px;
+  }
+  
+  .container9 .contain9 .box16{
+    width:180px;
+    height:100px;
+  }
+  
+  .container9 .contain9 .box16 .genre{
+    font-size: 18px;
+  }
+
+  .container10{
+    position: relative;
+    margin:10px 0px 20px 10px;
+    padding-bottom: 40px;
+  }
+
+  .container10 .carousel1{
+     overflow: hidden;
+  }
+  
+  .container10 .head8{
+    font-size: 30px;
+    margin:10px 0px 15px 10px;
+  }
+
+  .container10 .see{
+    position: absolute;
+    right:8px;
+    top:13px;
+    font-size: 12.5px;
+  }
+  
+  .container10 .contain10{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px 10px 10px 10px;
+  }
+
+  .container11 .finalpicture11{
+    position: relative;
+    background-image: url(./images/photo20.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .finalpicture11 .quote1{
+    color:#136a8a;
+    font-size:16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:400;
+    line-height:30px;
+    position: absolute;
+    top:120px;
+    left:60px;
+   }
+  
+  .finalpicture11 .justablock{
+     width:70px;
+     height:4px;
+     position: absolute;
+     top:240px;
+     left:160px;
+  }
+  
+  .finalpicture11 .person{
+    position: absolute;
+     top:270px;
+     left:50px;
+     width:280px;
+  }
+
+  /*---------------------------Playlist--------------------------*/
+  .container123{
+    display: none;
+  }
+
+  .transparent{
+    width:100%;
+    background-image: linear-gradient( 89.8deg,  rgba(204,156,223,1) 0.3%, rgba(155,219,245,1) 20.4%, rgba(245,183,208,1) 40.2%, rgba(250,186,98,1) 62.9%, rgba(234,238,240,1) 81.9%, rgba(250,245,171,1) 99.2% );
+    color: #fff;
+    height:60px;
+    width:1070px;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 999;
+    padding:12px 32px;
+  }
+
+  .transparent i.fa-solid.fa-less-than{
+    font-size:16px;
+    color: #fff;
+    position:absolute;
+    left:10px;
+    padding:5px 8px;
+  }
+
+  .transparent span{
+    padding-left:25px;
+    font-size: 20px;
+   }
+  
+  .transparent i.fa-solid.fa-greater-than{
+    display: none;
+  }
+
+  .transparent .up{
+    display: none;
+  }
+
+  .transparent .user{
+    display: none;
+  }
+
+  .transparent .fa-solid.fa-ellipsis{
+    display:block;
+    position: absolute;
+    top:250px;
+    right:110px;
+    color: #4B79A1;
+ }
+
+  .container4561{
+    display: block;
+    width:100%;
+    position: relative;
+    left: 0px;
+    height:280px;
+    width:100%;
+  }
+
+  .container4561 img{
+     width: 100%;
+     height:100%;
+     object-fit: cover;
+     box-shadow:0px 0px 10px 0px rgba(0,0,0,0.8);
+  }
+
+  .container4561 span{
+    position: absolute;
+    bottom:105px;
+    left:10px;
+    font-size:12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+  }
+
+  .container4561 p{
+    position: absolute;
+    bottom:70px;
+    left:10px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:30px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .container4561 .fi.fi-rr-headset{
+        position: absolute;
+        top:10px;
+        left:10px;
+        font-size:20px;
+        opacity:0.7;
+  }
+
+  .container4561 .symbols{
+    position: absolute;
+    bottom:20px;
+    right:10px;
+    display:flex;
+  }
+
+  .container4561 .box11{
+    width: 23px;
+    height:23px;
+  }
+
+  .container4561 .box22{
+    width: 23px;
+    height:23px;
+    margin: 0px 8px;
+  }
+
+  .container4561 .box33{
+    width: 25px;
+    height:25px;
+    margin: 0px 8px;
+  }
+
+.container4561 .heart{
+   width:100%;
+   height:100%;
+   object-fit: cover;
+   box-shadow:0px 0px 0px 0px rgba(0,0,0,0);
+}
+
+.container4561 sup{
+    font-size:11px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:600;
+    padding-left: 1.2px;
+}
+
+.container4561 .share{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  box-shadow:0px 0px 0px 0px rgba(0,0,0,0);
+}
+
+.container4561 .download{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  box-shadow:0px 0px 0px 0px rgba(0,0,0,0);
+}
+
+  .container4561 .onimage{
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right,#ADA996, #F2F2F2, #DBDBDB,#EAEAEA);
+  }
+
+  .container456{
+  display: none;
+  }
+
+  .container789{
+    position:relative;
+    width:100%;
+    left: 0px;
+    padding-bottom: 60px;
+  }
+
+  .heythere{
+    position:relative;
+  }
+
+  .container789 .bottom{
+    display: block;
+    transition: all 0.2s;
+    background-color:#fff;
+    position: fixed;
+    z-index: 999;
+    bottom:-320px;
+    width:100%;
+    height:320px;
+    padding:10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url('./images/con29.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .bottom .thepic{
+    position: relative;
+  }
+
+  .bottom .thepic img{
+    width:50px;
+    height:50px;
+  }
+
+  .bottom .thepic i.fa.fa-times{
+    font-size:25px;
+    position:absolute;
+    right:20px;
+    top:10px;
+    color:#fff;
+  }
+
+.bottom .thepic span{
+     font-size:16px;
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-weight: 600;
+     position:relative;
+     top:-20px;
+     padding-left:10px;
+     cursor: pointer;
+  }
+
+  .bottom .sections{
+    margin-top: 20px;
+    position:relative;
+  }
+
+.bottom .sections div{
+    margin:2px 0px 0px 0px;
+    position:relative;
+  }
+
+.bottom .sections .ic img{
+    width:30px;
+    height:30px;
+  }
+
+.bottom .sections .ic #cd{
+    width:25px;
+    height:25px;
+  }
+
+.bottom .sections .ic .album1{
+    padding-left:25px;
+  }
+
+.bottom .sections .ic span{
+    font-size:14px;
+    padding-left:20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:600;
+    position:relative;
+    top:-12px;
+  }
+  
+  .container678{
+    margin:0px 0px 10px 0px;
+    padding:10px 0px 0px 0px;
+    top:60px;
+    z-index:999;
+    width:100%;
+  }
+  
+  .container678 .head{
+    display: flex;
+    width: 1070px;
+    justify-content: flex-start;
+    color: #fff;
+  }
+  
+  .container678 .head .hash{
+    margin:0px 20px 0px 65px;
+  }
+  
+  .container678 .head .TITTLE{
+    margin:0px 0px 0px 22px;
+  }
+  
+  .container678 .head .ALBUM{
+   display: none;
+  }
+  
+  .container678 .head .ARTIST{
+    display: none;
+  }
+  
+  .container678 .head .DURATION{
+    display: none;
+  }
+  
+  hr{
+    width: 100%;
+  }
+  
+  .container89{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+    margin: 0px 10px 0px 10px;
+    padding:6px 0px;
+    position:relative;
+  }
+  
+  .container89 .fa-solid.fa-ellipsis-vertical{
+    display:block;
+    position: absolute;
+    top:22px;
+    right:15px;
+ }
+
+ .container89 .point{
+   display: none;
+ }
+  
+  .container89 .id{
+    margin:0px 20px 0px 50px;
+  }
+  
+  .container89 .cover{
+    margin:0px 0px 0px 20px;
+  }
+  
+  .container89 .cover img{
+    width: 50px;
+    height: 50px;
+  }
+  
+  .container89 .cover span{
+    margin:0px 6px;
+    position: relative;
+    top: -20px;
+    font-size:15px;
+
+  }
+  
+  .container89 .al{
+    display: none;
+  }
+  
+  .container89 .ar{
+    display: none;
+  }
+  
+  .container89 .duration{
+    display: none;
+  }
+  
+  .playerContainer{
+    width:100%;
+  }
+  
+  .playerContainer .player{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     margin: 3px 3px 6px 3px;
+     padding: 0px 8px;
+     width: 100%;
+  }
+  
+  .playerContainer .player .box1{
+    display: flex;
+    align-items: center;
+    padding:4px;
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .playerContainer .player .box1 img{
+    width:45px;
+    height:45px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+  }
+
+  .playerContainer .player .box1 .labels span{
+     font-size: 12px;
+  }
+
+  .playerContainer .player .box1 .labels p{
+    font-size: 10px;
+ }
+  
+ 
+  .playerContainer .player .box2{
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .playerContainer .player .box2 #shuffle1{
+    display: none;
+  }
+  
+  .playerContainer .player .box2 #repeat1{
+    display: none;
+  }
+
+  .playerContainer .player .box2 .previous{
+    display: none;
+  }
+
+  .playerContainer .player .box2 .next{
+    display: none;
+  }
+  
+  .playerContainer .player .box2 #play1{
+    width: 35px;
+    height: 35px;
+  }
+  
+  .playerContainer .player .box2 #play2{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .playerContainer .player .box3{
+    display: flex;
+    align-items: center;
+  }
+  
+  .playerContainer .player .box3 .start{
+    display:none;
+  }
+  
+  .playerContainer .player .box3 .progressContainer{
+    width: 128px;
+    margin: 0px 0px;
+  }
+  
+  .playerContainer .player .box3 .progress{
+    margin: 0px  0px;
+  }
+  
+  .playerContainer .player .box3 .end{
+    display:none;
+  }
+
+  /*---------------------------Extras--------------------------*/
+
+  .container40{
+    width:100%;
+  }
+  .container40 .wrapper1{
+      position:relative;
+      width:100%;
+  }
+  
+  .container40 .wrapper1 i.fi.fi-rr-headset{
+    position: absolute;
+    top:30px;
+    left:30px;
+    font-size:25px;
+  }
+
+  .container40 .wrapper1 .red{
+    position: absolute;
+    font-size: 25px;
+    top:22px;
+    left:60px;
+  }
+
+ .wrapper1 #elley{
+    display:block;
+    position: absolute;
+    top:32px;
+    right:30px;
+    padding: 5px 12px 6px 12px;
+    font-weight:700;
+    font-size:16px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .selena{
+    position:relative;
+    top:100px;
+    width:100%;
+    height:350px;
+  }
+  
+  .block{
+    position:relative;
+    height:320px;
+    border-radius:35px;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.6);
+    margin:-120px 20px 40px 20px;
+  }
+  
+  .block .limits{
+    text-align: center;
+    padding-top: 60px;
+    font-size:28px;
+    color:#000;
+    font-weight:500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .block .users{
+    text-align: center;
+    font-size:14px;
+    color:#243B55;
+    font-weight:600;
+    padding-top:10px;
+  }
+
+  .container41{
+    width:100%;
+  }
+  
+  .container41 .pre{
+    font-size:35px;
+  }
+  
+  .container41 .listen{
+    font-size:18px;
+    padding:20px 0px 20px 0px;
+  }
+  
+  .container41 .cardlogos{
+    margin:20px 0px 0px 0px;
+    text-align:center;
+  }
+  
+  .container41 .cardlogos img{
+    padding:0px 4px;
+    width:50px;
+    height:25px;
+  }
+  
+  .deals{
+     margin:40px 0px 30px 10px;
+     width:100%;
+  }
+
+  .deals .carousel5{
+    overflow:hidden;
+  }
+  
+  .deals .cards{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  
+  .deals .cards .col1{
+    min-width:200px;
+    min-height:400px;
+    padding:8px 3px 0px 22px;
+    margin:0px 10px;
+  }
+  
+  .cards .col1 .number{
+    font-size:26px;
+    font-weight:600;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:6px 0px 8px 0px;
+  }
+  
+  .cards .col1 .price{
+    font-size:20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:500;
+    margin:6px 0px 8px 0px;
+  }
+  
+  .cards .col1 .account{
+    font-size:20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:500;
+    margin:6px 0px 8px 0px;
+  }
+  
+  .col1 hr{
+    width:95%;
+    border-color:#B3FFAB;
+  }
+  
+  .cards .col1 .plans{
+    margin:12px 0px;
+  }
+  
+  .cards .col1 .plans ul {
+    margin:30px 0px 30px 0px;
+    max-height:150px;
+  }
+  
+  .cards .col1 .plans ul li{
+    font-size:16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin:10px 0px 10px 1em;
+  }
+  
+  .cards .col1 button{
+    margin:35px 0px 20px 0px;
+    padding:8px 15px;
+    background-color: #000;
+    border-radius:22px;
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:500;
+  }
+
+  /*------------------------Support---------------------------*/
+
+  .container02{
+    height:400px;
+    width:100%;
+    margin-bottom:30px;
+    padding:15px 0px;
+    position:relative;
+  }
+  
+  .container02 .help{
+    font-size:40px;
+  }
+
+  .container02 .boxem{
+      margin-bottom:40px;
+      position:relative;
+  }
+  
+  .container02 input{
+    padding:8px 250px 10px 10px;
+    margin:30px 0px 30px 20px;
+    position: absolute;
+    width:90%;
+  }
+  
+  .container02 i{
+      margin-left:25px;
+      position: absolute;
+      top:40px;
+      right:35px;
+  }
+  
+  .container02 input::placeholder{
+    font-size: 10px;
+  }
+  
+  .container02 .helpagain{
+    width:80%;
+    position:relative;
+    margin-top:100px;
+  }
+  
+  .container02 .helpagain .help1{
+    margin:0px 8px;
+   
+  }
+  
+  .container02 .helpagain .help2{
+    margin:0px 8px;
+  }
+  
+  .container02 .helpagain .help3{
+    margin:0px 8px;
+    
+  }
+  
+  .mainprob{
+    font-size: 10px;
+  }
+  
+  .subprob{
+    font-size: 12px;
+  }
+
+  .container03{
+    
+    height:350px;
+    width:100vw;
+    margin-bottom: 30px;
+  }
+  
+  .container03 .title{
+    font-size:32px;
+    padding:28px 0px 20px 0px;
+  }
+  
+  .container03 .sub{
+    font-size:18px;
+    padding:10px 0px 10px 0px;
+  }
+  
+  .container03 .logos{
+    margin:20px 0px 0px 0px;
+    position: relative;
+    }
+  
+  .container03 .logos img{
+  width:120px;
+  height:40px;
+  margin:0px 8px;
+  }
+
+  .logincontainer{
+    height: 100vh;
+    width: 100%;
+  }
+  
+  .logincontainer .loginC{
+    width:300px;
+  }
+
+  
+  /*------------------------Signin-----------------------*/
+
+  .logincontainer img{
+    position: absolute;
+    top: 20px;
+    left:20px;
+    width:35px;
+    height:35px;
+}
+  
+  /*------------------------Login-----------------------*/
+  
+  form .efield{
+    width:260px;
+    margin:15px 0px;
+   }
+   
+   form .pfield{
+     width:260px;
+     margin-bottom:20px;
+    }
+   
+   form #eye{
+     position:absolute;
+     top:80px;
+    }
+
+    /*------------------------Login Ends-----------------------*/
+
+    /*------------------------Track Starts(responsiveness)-----------------------*/
+    .trackContainer .container123{
+         display:none;
+    }
+
+    .transparent12{
+      width:100%;
+      position: fixed;
+      top:0px;
+      left:0px;
+      z-index: 999;
+    }
+    
+    .transparent12 i.fa-solid.fa-ellipsis-vertical{
+      display:block;
+      position: absolute;
+      right:30px;
+      top:20px;
+      color:#fff;
+    }
+
+    .trackContainer .imgcontainer1{
+         display:block;
+         position: relative;
+         left:0px;
+         top:60px;
+         width:100%;
+         height:100vh;
+    }
+    
+    .imgcontainer{
+      display:none;
+    }
+    
+    .imgcontainer1 .imgcontain{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      z-index: 99;
+    }
+    
+    .imgcontainer1 .imgcontain img{
+      width:100%;
+    }
+    
+    .imgcontainer1 .dford1{
+      position:fixed;
+      top:60px;
+      right:-600px;
+      width:100%;
+      height:100vh;
+      color:#000;
+      background-image: linear-gradient( 110.5deg,  rgba(71,114,148,1) 14.9%, rgba(149,245,211,1) 77.9% );
+       padding:20px 0px 0px 20px;
+       z-index: 999;
+       transition: linear 0.5s;
+    }
+
+    .imgcontainer1 .dford1 img{
+      width:32px;
+      height:32px;
+      position: absolute;
+      top:0px;
+      right:0px;
+      cursor: pointer;
+    }
+    
+  .imgcontainer1 .dford1 .det1{
+       font-size:50px;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       font-weight:500;
+       margin-top: 10px;
+}
+    
+.imgcontainer1 .dford1 .det2{
+      font-size:35px;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-weight:500;
+      margin-top: 5px;
+}
+    
+.imgcontainer1 .dford1 .det3{
+      font-size:16px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight:600;
+      margin-top: 8px;
+  }
+    
+.imgcontainer1 .dford1 .det4{
+      font-size:16px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-weight:600;
+      margin-top: 12px;
+    }
+    
+.imgcontainer1 .playerContainer1{
+      background-image: linear-gradient(to right,#4C516D,#4C516D);
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      z-index: 999;
+      height:58px;
+      width:100%;
+    }
+    
+.imgcontainer1 .playerContainer1 .player1{
+       display: flex;
+       width:100%;
+       align-items: center;
+       justify-content: space-around;
+    }
+    
+.imgcontainer1 .playerContainer1 .player1 .box1{
+       display: flex;
+       justify-content: space-around;
+       align-items: flex-start;
+       padding:8px 0px;
+    }
+    
+.imgcontainer1 .playerContainer1 .player1 .box1 img{
+       width:40px;
+       height:40px;
+    }
+    
+.imgcontainer1 .playerContainer1 .player1 .box1 .labels span{
+      font-size:14px;
+      padding-left: 3px;
+    }
+    
+.imgcontainer1 .playerContainer1 .player1 .box1 .labels p{
+      font-size:12px;
+      padding-left:3px;
+      padding-top: 2px;
+    }
+    
+    .imgcontainer1 .playerContainer1 .player1 .box2 img{
+      width:30px;
+      height:30px;
+      cursor: pointer;
+    }
+    
+.imgcontainer1 .playerContainer1 .player1 .box3 img{
+        width:23px;
+        height:23px;
+        cursor: pointer;
+}
+  
 }
